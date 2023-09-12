@@ -1,4 +1,4 @@
-public class EquipementDefensif {
+public abstract class EquipementDefensif {
 
 
     private int def;

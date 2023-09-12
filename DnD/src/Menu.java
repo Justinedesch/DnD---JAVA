@@ -15,7 +15,7 @@ public class Menu {
 
         if (userChoice.equals("Quit")) {
 
-            System.exit(1);
+//            System.exit(1);
 
 
             // Sinon, on passe à la personnalisation du personnage
@@ -81,15 +81,24 @@ public class Menu {
 
         }
 
-    }
 
 
-    public void startGame() {
+        public void startGame () {
+            Plateau plateau = new Plateau();
+            plateau.setPlateau();
+
+            Game game = new Game();
+            game.setPosition();
+
+
+        }
+
 
     }
 
 
 }
+
 
 
 

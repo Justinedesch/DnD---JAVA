@@ -6,7 +6,6 @@ public class Personnage {
 
 
     private String nom;
-
     private String type;
     private int pv;
     private int force;
