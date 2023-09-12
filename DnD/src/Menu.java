@@ -2,36 +2,95 @@ import java.util.Scanner;
 
 public class Menu {
 
+    public void MenuPrincipal() {
 
-    public static void main(String[] args) {
+// 1 - Le joueur chosit nouvelle partie ou quitter
 
         Scanner UChoice = new Scanner(System.in);
         System.out.println("Create new character OR Quit ?");
 
-        String userChoice = UChoice.nextLine();  // Read user input
-        System.out.println("Personnalisez votre joueur" + userChoice);  // Output user input
+        String userChoice = UChoice.nextLine();
 
-        Scanner nom = new Scanner(System.in);  // Create a Scanner object
-        System.out.println("Enter username");
+        // Si le joueur quitte, le programme se ferme
 
-        String userName = nom.nextLine();  // Read user input
-        System.out.println("Username is: " + userName);  // Output user input
+        if (userChoice.equals("Quit")) {
+
+            System.exit(1);
 
 
-        Scanner type = new Scanner(System.in);  // Create a Scanner object
+            // Sinon, on passe à la personnalisation du personnage
+
+        } else if (userChoice.equals("Create new character")) {
+
+
+            System.out.println("Personnalisez votre joueur" + userChoice);
+
+
+            Scanner nom = new Scanner(System.in);
+            System.out.println("Enter username");
+
+            String userName = nom.nextLine();
+            System.out.println("Username is: " + userName);
+
+        }
+
+// Une fois le nom choisit, on passe au type :
+
+        Scanner Utype = new Scanner(System.in);
         System.out.println("Enter type");
 
 
-        String userType = type.nextLine();
-        System.out.println("User Type is: " + userType);  // Output user input
+        String typeResult = Utype.nextLine();
 
 
-        Personnage newChar = new Personnage(userName, userType);
-        System.out.println(newChar);
+        // Si on choisit "Guerrier", cela créera un objet de la classe Guerrier
+
+        if (typeResult.equals("Guerrier")) {
+
+            Guerrier newChar = new Guerrier(typeResult);
+            System.out.println(newChar);
+
+
+            System.out.println("User Type is: " + typeResult);  // Output user input
+
+
+        }
+
+        // Si on choisit "Mage", cela créera un objet de la classe Mage
+        else if (typeResult.equals("Mage")) {
+
+            Mage newChar = new Mage(typeResult);
+            System.out.println(newChar);
+
+
+            String userType = Utype.nextLine();
+            System.out.println("User Type is: " + userType);  // Output user input
+
+        }
+
+
+        // Si on tape entrée sans rien choisir, cela créera un objet de la classe personnage (sans parametres de pv et force prédéfinis)
+
+        else if (Utype.equals(null)) {
+
+            Personnage newChar = new Personnage(typeResult);
+
+            String userType = Utype.nextLine();
+            System.out.println("User Type is: " + typeResult);  // Output user input
+
+
+        }
+
+    }
+
+
+    public void startGame() {
 
     }
 
 
 }
+
+
 
 
