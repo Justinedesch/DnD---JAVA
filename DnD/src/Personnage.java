@@ -4,6 +4,8 @@ import java.sql.ParameterMetaData;
 // Classe personnage :
 public class Personnage {
 
+    public Personnage() {
+    }
 
     private String nom;
     private String type;
@@ -60,6 +62,27 @@ public class Personnage {
 
     // CONSTRUCTEURS
 
+
+
+
+    // 2 - constructeur de la classe personnage avec nom
+    public Personnage(String nom) {
+
+//        this.nom = nom;
+        this(nom, "");
+    }
+
+
+    // 3 - constructeur de la classe personnage avec nom et type
+    public Personnage(String nom, String type) {
+
+//        this.nom = nom;
+//        this.type = type;
+//        this.pv = 6;
+//        this.force = 10;
+        this(nom,type,6,10);
+    }
+
     // 1 - constructeur de la classe personnage
 
     public Personnage(String nom, String type, int pv, int force) {
@@ -71,26 +94,6 @@ public class Personnage {
 //     this.equipementOffensif;
 // this.equipementDefensif ;
     }
-
-
-    // 2 - constructeur de la classe personnage avec nom
-    public Personnage(String nom) {
-
-        this.nom = nom;
-
-    }
-
-
-    // 3 - constructeur de la classe personnage avec nom et type
-    public Personnage(String nom, String type) {
-
-        this.nom = nom;
-        this.type = type;
-        this.pv = 6;
-        this.force = 10;
-    }
-
-
 
     public Personnage( int pv, int force) {
 

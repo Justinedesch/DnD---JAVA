@@ -1,8 +1,12 @@
 import java.util.Scanner;
+import test.Plateau;
 
 public class Game {
-    public void startGame () {
 
+   private Plateau plateau = new Plateau();
+
+    public void startGame () {
+        plateau.setPlateau();
     }
 
     //Position initiale du joueur
