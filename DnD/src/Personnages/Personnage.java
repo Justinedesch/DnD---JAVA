@@ -1,10 +1,14 @@
-import java.sql.ParameterMetaData;
+package Personnages;
 
+import java.sql.ParameterMetaData;
+import Stuffs.EquipementOffensif;
+import Stuffs.EquipementDefensif;
 
 // Classe personnage :
-public class Personnage {
+public abstract class Personnage {
 
     public Personnage() {
+        this("default");
     }
 
     private String nom;
@@ -107,9 +111,7 @@ public class Personnage {
 
     // Methode ToString renvoie les informations paramétrées "en sortie". Override permet de la surcharger : c'est à dire que cette simple méthode renvoie plusieures informations
     @Override
-    public String toString() {
-        return "Le nom de votre personnage est: " + this.nom + "" + " Son type est :" + this.type;
-    }
+    public abstract String toString();
 }
 
 

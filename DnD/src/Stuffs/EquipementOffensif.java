@@ -1,3 +1,5 @@
+package Stuffs;
+
 public abstract class EquipementOffensif {
 
 
@@ -14,8 +16,8 @@ public abstract class EquipementOffensif {
 
     }
 
-//    equipementOffensif Arme = new equipementOffensif(10, "Dein Nomos","Epée");
-//    equipementOffensif Sort = new equipementOffensif(20, "Hinotama","Sort élémentaire");
+//    equipementOffensif Stuffs.Arme = new equipementOffensif(10, "Dein Nomos","Epée");
+//    equipementOffensif Stuffs.Sort = new equipementOffensif(20, "Hinotama","Stuffs.Sort élémentaire");
 
 }
 

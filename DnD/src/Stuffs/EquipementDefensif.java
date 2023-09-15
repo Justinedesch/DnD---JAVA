@@ -1,3 +1,5 @@
+package Stuffs;
+
 public abstract class EquipementDefensif {
 
 
@@ -14,8 +16,8 @@ private String type;
 
     }
 
-//    equipementDefensif Bouclier = new equipementDefensif(20, "Ecu en fer","bouclier");
-//    equipementDefensif Philtre = new equipementDefensif(10, "Voile blanc","philtre");
+//    equipementDefensif Stuffs.Bouclier = new equipementDefensif(20, "Ecu en fer","bouclier");
+//    equipementDefensif Stuffs.Philtre = new equipementDefensif(10, "Voile blanc","philtre");
 
 
 }
