@@ -1,9 +1,8 @@
 package Stuffs;
 
 public class Arme extends EquipementOffensif {
-
     private int degats;
-    public Arme(int atk, String nom, String type) {
+    public Arme() {
         super(atk, nom, type);
         setDegats(12);
     }

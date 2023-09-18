@@ -4,7 +4,10 @@ import Personnages.Personnage;
 
 public class Guerrier extends Personnage {
 
-
+    /**
+     *
+     * @param nom
+     */
 
     public Guerrier(String nom) {
 

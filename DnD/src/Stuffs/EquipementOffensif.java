@@ -1,6 +1,8 @@
 package Stuffs;
 
-public abstract class EquipementOffensif {
+import Jeu.Case;
+
+public abstract class EquipementOffensif implements Case {
 
 
     private int atk;

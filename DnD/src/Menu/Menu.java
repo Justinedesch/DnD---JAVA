@@ -13,6 +13,10 @@ public class Menu {
     private Personnage personnage;
     Scanner uChoice = new Scanner(System.in);
 
+    /**
+     *
+     */
+
     public void showMenuPrincipal() {
 
 //        System.out.println("Welcome to Donjon et Dragon" +
@@ -97,6 +101,7 @@ public class Menu {
     }
 
 
+
     public void nameCharacter(Personnage personnage) {
         System.out.println("Personnalisez votre joueur : " + personnage.getNom());
         System.out.println("Enter username");
@@ -116,6 +121,10 @@ public class Menu {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     private String typeCharacter() {
         Scanner Utype = new Scanner(System.in);
         System.out.println("Entrer type : Guerrier | Mage");
