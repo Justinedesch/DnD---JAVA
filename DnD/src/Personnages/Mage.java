@@ -6,12 +6,12 @@ public class Mage extends Personnage {
 
 
     public Mage(String nom) {
-        super(nom, "Mage",6, 15);
+        super(nom, "Mage",46, 15);
     }
 
     @Override
     public String toString() {
-        return "Le nom de votre personnage est: " + getNom() + "" + " Son type est :" + getType() + " \n" +
+        return super.toString() + " \n" +
                 ",________________________________       \n" +
                 "|__________,----------._ [____]  \"\"-,__  __...-----===\"\n" +
                 "        (_(||||||||||||)___________/   \"\"             |\n" +

@@ -11,7 +11,7 @@ public class Guerrier extends Personnage {
 
     public Guerrier(String nom) {
 
-     super(nom,"Guerrier",10,10);
+     super(nom,"Guerrier",50,10);
     }
 
     public Guerrier(String nom, String type, int pv, int force) {

@@ -8,15 +8,18 @@ import Jeu.PersonnageHorsPlateauException;
 
 import java.util.Scanner;
 
+/**
+ * Menu principal permettant d'initialiser son personnage et lancer une partie
+ */
 public class Menu {
 
     private Personnage personnage;
     Scanner uChoice = new Scanner(System.in);
 
-    /**
-     *
-     */
 
+    /**
+     * Permets d'afficher le menu avec 4 choix possibles utilisant leur méthode respective
+     */
     public void showMenuPrincipal() {
 
 //        System.out.println("Welcome to Donjon et Dragon" +
@@ -60,6 +63,7 @@ public class Menu {
             String name = chooseName.nextLine();
             String type = typeCharacter();
 
+
             switch (type) {
                 case "Guerrier" -> this.personnage = new Guerrier(name);
 
@@ -100,7 +104,10 @@ public class Menu {
 
     }
 
-
+    /**
+     * permets d'attribuer un nom au personnage
+     * @param personnage  (string name)
+     */
 
     public void nameCharacter(Personnage personnage) {
         System.out.println("Personnalisez votre joueur : " + personnage.getNom());
@@ -121,9 +128,11 @@ public class Menu {
         }
     }
 
+
+
     /**
-     *
-     * @return
+     * permets de donner un type au personnage
+     * @return  (string type)
      */
     private String typeCharacter() {
         Scanner Utype = new Scanner(System.in);
@@ -134,16 +143,29 @@ public class Menu {
 
     //Methode choix 3
 
+
+    /**
+     * Permets de quitter le programme
+     */
     private void quit() {
         System.exit(1);
     }
 
+    /**
+     * permets de changer le nom et le type du personnage
+     * @param personnage  (reprends les methodes name et type character, mets à jour l'objet personnage)
+     */
     private void updateUser(Personnage personnage) {
         nameCharacter(personnage);
 //        typeCharacter();
     }
 
     //Methode Choix 4
+
+    /**
+     * initialise une nouvelle partie avec exception si hors plateau
+     * @param personnage (prends un paramètre l'objet personnage recemment créé)
+     */
     private void startGame(Personnage personnage) {
         Game game = new Game();
         try {
@@ -163,7 +185,8 @@ public class Menu {
                     "\n"
             );
 
-           this.showMenuPrincipal();
+         this.showMenuPrincipal();
+
 
         }
     }

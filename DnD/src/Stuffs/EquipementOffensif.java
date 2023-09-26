@@ -11,7 +11,7 @@ public abstract class EquipementOffensif implements Case {
 
 //constructeur de la classe equipementOffensif
 
-    EquipementOffensif(int atk, String nom, String type) {
+    EquipementOffensif() {
         this.atk = atk;
         this.nom = nom;
         this.type = type;

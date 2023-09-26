@@ -110,10 +110,55 @@ public abstract class Personnage {
 
 
     // Methode ToString renvoie les informations paramétrées "en sortie". Override permet de la surcharger : c'est à dire que cette simple méthode renvoie plusieures informations
+
+
     @Override
-    public abstract String toString();
+    public String toString() {
+        return "Personnage{" +
+                "nom='" + nom + '\'' +
+                ", type='" + type + '\'' +
+                ", pv=" + pv +
+                ", force=" + force +
+                ", equipementOffensif=" + equipementOffensif +
+                ", equipementDefensif=" + equipementDefensif +
+                '}';
+    }
+
+    public void receiveDamage(int dmgReceived) {
+        this.pv-=dmgReceived;
+        if(this.pv<0) this.pv = 0;
+    }
+
+    public boolean isAlive(){
+        return this.pv >0;
+    }
+
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//            System.out.println("\n" +
+//
+//                    " __   __   ___    _   _          __      __ ___    _  _   \n" +
+//                    " \\ \\ / /  / _ \\  | | | |    o O O\\ \\    / /|_ _|  | \\| |  \n" +
+//                    "  \\ V /  | (_) | | |_| |   o      \\ \\/\\/ /  | |   | .` |  \n" +
+//                    "  _|_|_   \\___/   \\___/   TS__[O]  \\_/\\_/  |___|  |_|\\_|  \n" +
+//                    "_| \"\"\" |_|\"\"\"\"\"|_|\"\"\"\"\"| {======|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"| \n" +
+//                    "\"`-0-0-'\"`-0-0-'\"`-0-0-'./o--000'\"`-0-0-'\"`-0-0-'\"`-0-0-'" +
+//                    "\n" +
+//                    "\n"
+//            );
 
 
 
